@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none !important;
+  border-radius: 50%;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: url("../img/jf-martin-Ofs3LjEUcrk-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.crv-8 {
+  border-radius: 8px;
+}
+
+.crv-25 {
+  border-radius: 25px;
+}
+
+.text-orange {
+  color: orange !important;
+}
+
+.text-orange-light {
+  color: #ffc75e !important;
+}
+
+.text-orange-dark {
+  color: #d88c00;
+}
+
+.linkstyle-none {
+  text-decoration: none;
+}
+
+.linkstyle-none:hover {
+  text-decoration: none;
+}
+
+.files input {
+  outline: 2px dashed orange;
+  outline-offset: -10px;
+  -webkit-transition: outline-offset 0.15s ease-in-out, background-color 0.15s linear;
+  transition: outline-offset 0.15s ease-in-out, background-color 0.15s linear;
+  padding: 120px 0px 85px 35%;
+  text-align: center !important;
+  margin: 0;
+  width: 100% !important;
+}
+
+.files input:focus {
+  outline: 2px dashed orange;
+  outline-offset: -10px;
+  -webkit-transition: outline-offset 0.15s ease-in-out, background-color 0.15s linear;
+  transition: outline-offset 0.15s ease-in-out, background-color 0.15s linear;
+  border: 1px solid black;
+}
+
+.files {
+  position: relative;
+}
+
+.files:after {
+  pointer-events: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 50px;
+  right: 0;
+  height: 56px;
+  content: "";
+  background-image: url(https://image.flaticon.com/icons/png/128/109/109612.png);
+  display: block;
+  margin: 0 auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.color input {
+  background-color: #f1f1f1;
+}
+
+.files:before {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  right: 0;
+  height: 57px;
+  content: " or drag it here. ";
+  display: block;
+  margin: 0 auto;
+  color: orange;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.glass-card {
+  min-height: 400px;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.2)));
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2));
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  overflow: hidden;
+}
+
+.glass-card .glass-card-line {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.fa-instagram,
+.fa-instagram:hover {
+  width: 45px;
+  background: -webkit-linear-gradient(#dd9000, #d427d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-facebook,
+.fa-facebook:hover {
+  width: 45px;
+  color: #3b5998;
+}
+
+.fa-github,
+.fa-github:hover {
+  width: 45px;
+  color: #333;
+}
+
+.fa-twitter,
+.fa-twitter:hover {
+  width: 45px;
+  color: #038cc2;
+}
+
+.loading-anim .svg-container {
+  height: 50px;
+  width: 50px;
+}
+
+.md-visible {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .md-hidden {
+    display: none;
+  }
+  .md-visible {
+    display: block;
+  }
+}
+
+.progress {
+  position: relative;
+  width: 100%;
+}
+
+.bar {
+  background-color: #00ff00;
+  width: 0%;
+  height: 20px;
+}
+
+.percent {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  color: #040608;
+}
+/*# sourceMappingURL=style.css.map */
