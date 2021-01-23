@@ -36,7 +36,6 @@
                         @endif
                     </div>
                 </div>
-                    {{-- <img src="img/Alaskan-Malamute-On-White-03.jpg" style="min-height: 400px;" alt="" class="img-fluid md-hidden"> --}}
             </div>
             <div class="col-md-6">
                 <div class="col-md px-3 py-2 mt-3">

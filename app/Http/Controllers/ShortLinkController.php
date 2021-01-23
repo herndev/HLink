@@ -12,7 +12,10 @@ class ShortLinkController extends Controller
     public function generatelink(Request $request)
     {
         # code...
-        $domain = "http://hlink.ml/l/";
+        // APP URL
+        $appUrl = env("APP_URL", "127.0.0.1:8000");
+        $domain = $appUrl . "/l/";
+
 
         $validator = Validator::make($request->all(), [
             'link' => 'required|url',
@@ -35,7 +38,7 @@ class ShortLinkController extends Controller
         $shortlink->link = $request->link;
         $shortlink->save();
 
-        return view("results", ["shortlink" => $shortlink, "domain" => $domain]);
+        return ["shortlink" => $shortlink, "domain" => $domain];
     }
 
 

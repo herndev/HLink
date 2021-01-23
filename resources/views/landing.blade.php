@@ -117,13 +117,35 @@
                         <label for="link" class="text-primary2 font-weight-bold">Put your link here</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon3">http://</span>
+                                <span class="input-group-text ion-link" id="basic-addon3"></span>
                             </div>
                             <input type="text" class="form-control" id="link" name="link" required onblur="checkURL(this)"
                                 placeholder="Your link" aria-describedby="basic-addon3">
                         </div>
                         <button type="submit" class="btn btn-success btn-block mt-3">Generate short link</button>
                     </form>
+
+                    
+                    <div id="res_sl_container" class="display-none">
+                        <label class="text-primary2 font-weight-bold">Generated link</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text ion-link" id="basic-addon9"></span>
+                            </div>
+                            <input type="text" class="form-control" id="res_your_link" disabled name="res_your_link" placeholder="Your link" aria-describedby="basic-addon9">
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text ion-link"></span>
+                            </div>
+                            <input type="text" class="form-control" disabled id="res_short_link" name="res_short_link"
+                                placeholder="Short link" aria-describedby="basic-addon10">
+                            <div class="input-group-append">
+                                <button class="btn btn-success btn-block" onclick="copyLink('short_link')">Copy</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-block my-3" onclick="location.reload()">Generate another link</button>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">

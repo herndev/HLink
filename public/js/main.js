@@ -36,21 +36,21 @@ function checkURL(link) {
     return link
 }
 
-// Uplaoding file animation
+// File hosting form
 var bar = $('.bar');
 var percent = $('.percent');
 $('#fh_form').ajaxForm({
     beforeSend: function () {
-        var percentVal = '0%';
-        bar.width(percentVal)
-        percent.html(percentVal);
+        // var percentVal = '0%';
+        // bar.width(percentVal)
+        // percent.html(percentVal);
         $(".loading-anim").removeClass("display-none");
         $("#fh_form").addClass("display-none");
     },
     uploadProgress: function (event, position, total, percentComplete) {
-        var percentVal = percentComplete + '%';
-        bar.width(percentVal)
-        percent.html(percentVal);
+        // var percentVal = percentComplete + '%';
+        // bar.width(percentVal)
+        // percent.html(percentVal);
     },
     complete: function (xhr) {
         // alert('File Has Been Uploaded Successfully');
@@ -80,6 +80,30 @@ $('#fh_form').ajaxForm({
     }
 });
 
+
+// Short link form
+$('#sl_form').ajaxForm({
+    beforeSend: function () {
+        // var percentVal = '0%';
+        // bar.width(percentVal)
+        // percent.html(percentVal);
+        $("#sl_form").addClass("display-none");
+    },
+    uploadProgress: function (event, position, total, percentComplete) {
+        // var percentVal = percentComplete + '%';
+        // bar.width(percentVal)
+        // percent.html(percentVal);
+    },
+    complete: function (xhr) {
+        // alert('Link Has Been Generated Successfully');
+        $("#res_sl_container").removeClass("display-none");
+
+        // Setup response
+        $("#res_your_link").val(xhr['responseJSON']['shortlink']['link']);
+        $("#res_short_link").val(xhr['responseJSON']['domain'] + xhr['responseJSON']['shortlink']['code']);
+    }
+});
+
 // Copy link
 function copyLink(param = ""){
     var copyText;
@@ -88,6 +112,9 @@ function copyLink(param = ""){
     if(param == ""){
         copyText = document.getElementById('res_link');
         $("#res_link").removeAttr("disabled");
+    }else if(param == 'short_link'){
+        copyText = document.getElementById('res_short_link');
+        $("#res_short_link").removeAttr("disabled");
     }else{
         copyText = document.getElementById('res_del_link');
         $("#res_del_link").removeAttr("disabled");
@@ -101,6 +128,8 @@ function copyLink(param = ""){
     // Disabling input text
     if(param == ""){
         $("#res_link").attr("disabled", "");
+    }else if(param == 'short_link'){
+        $("#res_short_link").attr("disabled", "");
     }else{
         $("#res_del_link").attr("disabled", "");
     }
