@@ -22,14 +22,8 @@ Route::get('/', function () {
 Route::get('/dl/{code}', [FileHostingController::class, 'downloadFile']);
 Route::get('/dl/{code}/{key}', [FileHostingController::class, 'downloadSecuredFile']);
 Route::get('/dld/{code}', [FileHostingController::class, 'downloadedFile']);
+Route::get('/rm/{code}', [FileHostingController::class, 'removeFile']);
 
-Route::get('/rm/{code}', function () {
-    return view('remove');
-});
-
-
-
-Route::get('/test', [ShortLinkController::class, 'test']);
 Route::get('/l/{code}', [ShortLinkController::class, 'navigatelink']);
 Route::post('/generatelink', [ShortLinkController::class, 'generatelink']);
 Route::post('/uploadfile', [FileHostingController::class, 'uploadfile']);

@@ -54,11 +54,9 @@ class FileHostingController extends Controller
         // APP URL
         $appUrl = env("APP_URL", "127.0.0.1:8000");
 
-        $file = File::find($code);
+        $file = File::where(["id" => $code, "active" => 0])->first();
         if ($file == NULL) {
-            return response()->json(array(
-                "message" => "File not found!",
-            ), 404);
+            return view("result", ["header" => "Something went wrong", "message" => "File not found !!"]);
         }
 
         $data = [
@@ -82,11 +80,9 @@ class FileHostingController extends Controller
         // APP URL
         $appUrl = env("APP_URL", "127.0.0.1:8000");
 
-        $file = File::find($code);
+        $file = File::where(["id" => $code, "active" => 0])->first();
         if ($file == NULL) {
-            return response()->json(array(
-                "message" => "File not found!",
-            ), 404);
+            return view("result", ["header" => "Something went wrong", "message" => "File not found !!"]);
         }
 
         $data = [
@@ -107,14 +103,26 @@ class FileHostingController extends Controller
     public function downloadedFile($code)
     {
         # code...
-        $file = File::find($code);
+        $file = File::where(["id" => $code, "active" => 0])->first();
         if ($file == NULL) {
-            return response()->json(array(
-                "message" => "File not found!",
-            ), 404);
+            return view("result", ["header" => "Something went wrong", "message" => "File not found !!"]);
         }
 
         $file->downloads += 1;
         $file->save();
+    }
+
+
+    public function removeFile($code)
+    {
+        # code...
+        $file = File::where(["id" => $code, "active" => 0])->first();
+        if ($file == NULL) {
+            return view("result", ["header" => "Something went wrong", "message" => "File not found !!"]);
+        }
+
+        $file->active = 1;
+        $file->save();
+        return view("result", ["header" => $file->filename, "message" => "File deleted successfully !!"]);
     }
 }

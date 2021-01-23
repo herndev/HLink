@@ -45,6 +45,10 @@ class ShortLinkController extends Controller
     public function navigatelink($code)
     {
         $shortlink = ShortLink::where("code",$code)->first();
+        if ($shortlink == NULL) {
+            return view("result", ["header" => "Something went wrong", "message" => "Link not found !!"]);
+        }
+
         return redirect($shortlink->link);
     }
 }
