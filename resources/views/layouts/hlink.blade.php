@@ -50,10 +50,10 @@
         </main>
     </div>
 
-    <script src="{{ asset('mini_lib/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('mini_lib/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('mini_lib/js/jquery.form.js') }}"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ secure_asset('mini_lib/js/jquery.min.js') }}"></script>
+    <script src="{{ secure_asset('mini_lib/js/bootstrap.min.js') }}"></script>
+    <script src="{{ secure_asset('mini_lib/js/jquery.form.js') }}"></script>
+    <script src="{{ secure_asset('js/main.js') }}"></script>
 </body>
 </html>
 
