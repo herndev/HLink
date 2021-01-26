@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ secure_asset('mini_lib/css/ionicons.css') }}">
 
 
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
