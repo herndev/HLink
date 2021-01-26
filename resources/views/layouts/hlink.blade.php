@@ -13,11 +13,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- jQuery -->
-    <link rel="stylesheet" href="{{ asset('mini_lib/css/font-awesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('mini_lib/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('mini_lib/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('mini_lib/css/hover.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('mini_lib/css/ionicons.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('mini_lib/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('mini_lib/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('mini_lib/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('mini_lib/css/hover.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('mini_lib/css/ionicons.css') }}">
 
 
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
